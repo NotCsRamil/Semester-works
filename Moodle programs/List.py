@@ -49,3 +49,34 @@ for i in range(len(L)):
             L2+=L[i][0:6]
 
 print(L2)'''
+
+#M4_CSQ2
+'''
+L1=[]#arr
+N=int(input())
+for i in range(N):
+    a=input()
+    L1.append(a)
+
+L2=[]#stack
+operator=["+","-","*","/","%"]
+for i in L1:
+    if i not in operator:
+        L2.append(i)
+    else:
+        first=float(L2.pop())
+        sec=float(L2.pop())
+
+        if i=="+":
+            L2.append(sec+first)
+        if i=="-":
+            L2.append(sec-first)
+        elif i=="*":
+            L2.append(sec*first)
+        elif i=="/":
+            L2.append(sec/first)
+        elif i=="%":
+            L2.append(sec%first)
+#print(L1)
+print(int(L2[-1]))'''
+
