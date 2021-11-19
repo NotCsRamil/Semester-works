@@ -185,3 +185,136 @@ if (year%400==0) or (year%100!=0) and (year%4==0):
     print("leap year")
 else:
     print("not leap year")'''
+
+#*
+#**
+#***
+'''n=int(input())
+for i in range(1,n+1):
+    for st in range(1,i+1):       
+        print("*",end="")
+    for sp in range(1,n-i+1):
+        print("",end="")
+    print()'''
+
+#  *
+ #**
+#***
+'''n=int(input())
+for i in range(1,n+1):
+    for sp in range(1,n-i+1):
+        print(" ",end="")
+    for st in range(1,i+1):       
+        print("*",end="")
+    print()'''
+
+
+#***
+#**
+#*
+'''n=int(input())
+for i in range(1,n+1):
+    for st in range(1,n-i+2):       
+        print("*",end="")
+    for sp in range(1,i):
+        print("",end="")
+    print()'''
+
+
+#***
+ #**
+ # *
+'''n=int(input())
+for i in range(1,n+1):
+    for sp in range(1,i):
+        print(" ",end="")
+    for st in range(1,n-i+2):       
+        print("*",end="")
+    print()'''
+
+#*
+#**
+#***
+#***
+#**
+#*
+
+'''n=int(input())
+for i in range(1,n+1):
+    for st in range(1,i+1):       
+        print("*",end="")
+    for sp in range(1,n-i+1):
+        print("",end="")
+    print()
+for i in range(1,n+1):
+    for st in range(1,n-i+2):
+        print("*",end="")
+    for sp in range(1,i):
+        print("",end="")
+    print()'''
+ 
+        
+#bddddb
+#bbddbb
+#bbbbbb
+
+'''n=int(input())
+for i in range(1,n+1):
+    for b in range(1,i+1):
+        print("b",end="")
+    for d in range(1,n-i+1):
+        print('d',end='')
+    for d in range(1,n-i+1):
+        print("d",end="")
+    for b in range(1,i+1):
+        print('b',end='')
+    print()'''
+
+'''T1=("Education","Primary",50,"Secondary",25,"Higher",20)
+T2=("Defense","Army",25,"Airforce",40,"Navy",45)
+T3=()
+T4=()
+T5=()
+#T3+=((T1[0],T1[2]+T1[4]+T1[6]),(T2[0],T2[2]+T2[4]+T2[6]))
+#for i in range(len(T1)):
+T3+=((T1[0],sum(T1[2::2])))
+T4+=((T2[0],sum(T2[2::2])))
+T5=((T3),(T4))
+print(T5)'''
+
+'''t=[]
+N=int(input())#tuples
+for i in range(N):
+    T=[]
+    S=int(input())#size
+    for i in range(S):
+        a=input()
+        try:
+            a=int(a)
+        except:
+            pass
+        
+        T.append(a)
+    t.append(T)
+    #print(T)
+#print(tuple(t))
+
+
+print(tuple(t))
+T1=()
+for i in range(len(t)):
+    T1+=((t[i][0],sum(t[i][2::2])),)
+    
+print((T1),)'''
+
+Car1={"vehNo":"TN23NJ1234","color":"Black","Model":2019}
+print(Car1)
+for ele in Car1:
+    print(Car1[ele])
+Car2={"vehNo":"TN23AB1001","color":"RedndBlack","Model":2020}
+CarD={101:Car1,102:Car2}
+for ele in CarD:
+    print(ele)
+print(CarD[101])
+print(CarD[101]["vehNo"])
+
