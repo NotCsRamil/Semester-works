@@ -307,7 +307,7 @@ for i in range(len(t)):
     
 print((T1),)'''
 
-Car1={"vehNo":"TN23NJ1234","color":"Black","Model":2019}
+'''Car1={"vehNo":"TN23NJ1234","color":"Black","Model":2019}
 print(Car1)
 for ele in Car1:
     print(Car1[ele])
@@ -316,5 +316,108 @@ CarD={101:Car1,102:Car2}
 for ele in CarD:
     print(ele)
 print(CarD[101])
-print(CarD[101]["vehNo"])
+print(CarD[101]["vehNo"])'''
+
+'''D=()
+c={}
+N=int(input())#dict
+for i in range(N):
+    S=int(input())#no of subjects
+    D1={}
+    for j in range(S):
+        Sub=input()#subjects
+        c[Sub]=0
+        m1=int(input())#marks
+        D1[Sub]=m1
+    D+=(D1,)
+#print(D)
+#c={m1:0}
+D2=()
+for i in D:
+    for key in i.keys():
+        if i[key]<50:
+            c[key]+=1
+for i in c.keys():
+    print(i)
+    print(c[i])
+print("2")'''
+
+'''M=int(input())
+if M<0:
+    print("Invalid")
+if M>90:
+    print("S")
+elif M>=81 and M<=90:
+    print("A")
+elif M>=71 and M<=80:
+    print("B")
+elif M>=61 and M<=70:
+    print("C")
+elif M>=51 and M<=60:
+    print("D")
+elif M>0 and M<=49:
+    print("F")'''
+
+'''D=()
+N=int(input())
+for i in range(N):
+    D1={}
+    S=int(input())
+    for j in range(S):
+        lp=input()
+        C=int(input())
+        D1[lp]=C
+    D+=(D1,)
+#print(D)
+L=int(input())#range1
+H=int(input())#range2
+for i in D:
+    for key,value in i.items():
+        if value>=L and value<=H:
+            print(key)
+            print(value)'''
+
+'''S1=input()
+S2=input()
+if S2.lower() not in S1:
+    print("Not Found")
+if S2.lower() in S1:
+    
+    for i in S1.split():
+        F=S1.find(S2.lower())
+        F1=len(S2)
+    print(F)
+    print(F+F1)'''
+
+'''S=input()
+Letters = list(S)
+Dict = dict.fromkeys(Letters,0)
+if len(Letters) != len(Dict.keys()): 
+          print("BAD")
+else:
+    print("GOOD")'''
+
+'''import re
+s="Rahul got 75 marks, Vijay got 55 marks, whereas Subbu got 98 marks"
+p1="\d+"
+p2="^[A-Z]"
+
+result1 = re.findall(p1,s)
+
+print(result1)
+L=[]
+for i in s.split():
+    if re.findall(p2,i):
+        #print(i,end="")
+        L.append(i)
+print(L)'''
+
+'''import re
+pattern = '^[aAeEiIoOuU]'
+txt = "An apple for a day keeps the doctor away"
+for I in txt.split():
+    if re.findall(pattern,I):
+        print(I)'''
+        
+
 
