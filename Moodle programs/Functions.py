@@ -24,3 +24,42 @@ def C_R(heads,legs):
         c=heads-r
     return r,c
 F=print(C_R(m,n))'''
+
+##M6_CSQ3
+'''D = input()
+D = D[1:len(D)-1].split(',')
+
+sum = 0
+for I in D:
+    I = I.split(':')
+    sum = sum + int(I[1])
+
+Average = int(sum/len(D))
+def Check_Mark():
+    L = []
+
+    Str = ""
+    for I in D :
+        I = I.split(":")
+        if int(I[1]) == Average :
+            Str = Str + I[0][1:len(I[0])-1] + ", "
+    L.append(Str)
+
+    Str = ""
+    for I in D :
+        I = I.split(":")
+        if int(I[1]) > Average :
+            Str = Str + I[0][1:len(I[0])-1] + ', '
+    L.append(Str)
+
+    Str = ""
+    for I in D :
+        I = I.split(":")
+        if int(I[1]) < Average :
+            Str = Str + I[0][1:len(I[0])-1] + ', '
+    L.append(Str)
+
+    for I in L : 
+        if I != "":
+            print(I[:len(I)-2])
+Check_Mark()'''
