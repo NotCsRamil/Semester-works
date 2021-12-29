@@ -418,6 +418,252 @@ txt = "An apple for a day keeps the doctor away"
 for I in txt.split():
     if re.findall(pattern,I):
         print(I)'''
+
+'''T = input().split(',')
+#S = input().split(',')
+X = input().split(',')
+Y = input().split(',')
+Z = input().split(',')
+S=X+Y+Z
+
+N_Teams = len(T)
+N_stud = len(S)
+panel_size = N_stud//N_Teams
+if N_stud%N_Teams==0:
+    for i in range(len(T)):
+        panel = [T[i] ]+S[0:int(panel_size)]
+        print(panel)
+        del S[0:int(panel_size)]
+else:
+    panel_size_lst = []
+    remain = N_stud%N_Teams
+    temp = 0
+    for i in range(N_Teams):
+        if temp<remain:
+            panel_size_lst.append(panel_size + 1)
+        else:
+            panel_size_lst.append(panel_size)
+        temp = temp+1
+        panel = [T[i]]+S[0:panel_size_lst[-1]]
+        print(panel)
+        del stud[0:panel_size_lst[-1]]'''
+
+
+'''S1=[]
+L1=[]
+N=input()
+T=N.split(",")
+Length=len(T)
+for i in range(Length):
+    L1=[]
+    L1.append(T[0])
+    del T[0]
+    n=input()
+    Num=n.split(",")
+    for i in Num:
+        if i.isnumeric():
+            j=int(i)
+
+            L1.append(j)
+        else:
+            L1.append(i)
+    S1.append(L1)
+for i in S1:
+    print(i)'''
+
+'''T=input()
+X=input()
+Y=input()
+Z=input()
+Max,F=0,0
+i=T.split(",")
+j=X.split(",")
+k=Y.split(",")
+l=Z.split(",")
+n=len(i)
+for p in range(0,n):
+    total=int(j[p])+int(k[p])+int(l[p])
+    L=[i[p],int(j[p]),int(k[p]),int(l[p])]
+    print(L)
+    if total>Max:
+        Max=total
+        F=p
+L1=[i[F],Max]
+print(L1)'''
+
+'''def pig(S):
+    S1=S[-3]+S[0::]
+    S1=list(S1)
+    S1.pop()
+    S1.pop()
+    S1.pop()
+    S1=str(S1)
+    print(S1)
+Str=input()
+pig(Str)'''
+
+'''D={}
+N=3#size
+for i in range(N):
+    Name=input()
+    Mark=int(input())
+    D[Name]=Mark
+#print(D)
+Sum=0
+for i in D.values():
+    Sum=Sum+i
+    A=(Sum)/len(D)
+#print(A)
+for i in D.keys():
+    if D[i]==A:
+        print(i)
+for i in D.keys():
+    if D[i]>A:
+        print(i)
+for i in D.keys():
+    if D[i]<A:
+        print(i)'''
+
+
+
+'''
+D = input() 
+D = D[1:len(D)-1].split(",")
+
+sum = 0
+for I in D :
+      I = I.split(":")
+      sum += int(I[1])
+#print(sum/len(D))
+A=int(sum/len(D))
+#print(A)
+def check_Mark():
+      for I in D :
+            I=I.split(":")
+            if int(I[1])==A:
+                  print(I[0][1:len(I[0])-1],end=",")
+      print()
+      for I in D :
+            I=I.split(":")
+            if int(I[1])>A:
+                  print(I[0][1:len(I[0])-1],end=",")
+      print()  
+      for I in D :
+            I=I.split(":")
+            if int(I[1])<A:
+                  print(I[0][1:len(I[0])-1],end=",")
+      print()  
+
+check_Mark()
+#{'abc':10,'def':80,'ijk':60}'''
+
+'''def check_Mark(D):
+      for I in D :
+            I=I.split(":")
+            if int(I[1])==A:
+                  print(I[0][1:len(I[0])-1])
+      for I in D :
+            I=I.split(":")
+            if int(I[1])>A:
+                  print(I[0][1:len(I[0])-1])
+      for I in D :
+            I=I.split(":")
+            if int(I[1])<A:
+                  print(I[0][1:len(I[0])-1])'''
+
+'''D = input()
+D = D[1:len(D)-1].split(',')
+
+sum = 0
+for I in D:
+    I = I.split(':')
+    sum = sum + int(I[1])
+
+Average = int(sum/len(D))
+
+L = []
+
+A,B,C = "","",""
+
+for I in D :
+      I = I.split(":")
+      if int(I[1]) == Average :
+          A = A + I[0][1:len(I[0])-1] + ", "
+      if int(I[1]) > Average :
+          B = B + I[0][1:len(I[0])-1] + ', '
+      if int(I[1]) < Average :
+          C = C + I[0][1:len(I[0])-1] + ', '
+
+L.append(A)
+L.append(B)
+L.append(C)
+
+for I in L : 
+      if I != "":
+          print(I[:len(I)-2])'''
+
+'''def area(r):
+      a = 3.14*r**2
+      return a
+n=int(input())
+print(area(n))'''
+
+'''def SI(a,b,c=10.5):
+      SI=(a*b*c)/100
+      return SI
+p=int(input())
+t=int(input())
+#r=float(input())
+print(SI(p,t))'''
+
+
+'''def fibo(n):
+      if n<=1:
+            return n
+      else:
+            return(fibo(n-1)+fibo(n-2))
+N=int(input())
+for i in range(N):
+      print(fibo(i),end=" ")'''
+'''#kevin
+s1=input()
+c1=0
+for i in range(len(s1)):
+      if s1[i]=="a" or s1[i]=="A":
+            c1+=1
+      elif s1[i]=="e" or s1[i]=="E":
+            c1+=1
+      elif s1[i]=="i" or s1[i]=="I":
+            c1+=1
+      elif s1[i]=="o" or s1[i]=="O":
+            c1+=1
+      elif s1[i]=="u" or s1[i]=="U":
+            c1+=1
+      elif "ANA" in s1:
+            c1+=3
+#print(c1)
+#stuart
+s3=input()
+c2=0
+for i in range(len(s3)):
+      if s3[i]=="a" or s3[i]=="A":
+            c2+=1
+      elif s3[i]=="e" or s3[i]=="E":
+            c2+=1
+      elif s3[i]=="i" or s3[i]=="I":
+            c2+=1
+      elif s3[i]=="o" or s3[i]=="O":
+            c2+=1
+      elif s3[i]=="u" or s3[i]=="U":
+            c2+=1
+      elif "ANA" in s3:
+            c2+=3
+#print(c2)
+if c1>c2:
+      print("Stuart",c1)
+else:
+      print("Kevin",c2)'''
+
         
 
 
