@@ -63,3 +63,17 @@ def Check_Mark():
         if I != "":
             print(I[:len(I)-2])
 Check_Mark()'''
+
+#M6_CSQ5
+'''
+def frequency(S):
+    S=S.split()
+    L=[]
+    for I in S:
+        if I not in L:
+            L.append(I)
+    L.sort()
+    for I in range(len(L)):
+        print(f"{L[I]}:{S.count(L[I])}")
+Str=input()
+frequency(Str)'''
