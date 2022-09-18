@@ -31,23 +31,38 @@ void show(){
 	}
 }
 int main(){
-	int x,a,b=0;
-	cout<<"Enter your choice";
-	cin>>a;
-	if(a==1){
-		cin>>x;
-		push(x);
-	}
-	else if(a==2){
-		pop();
-		show();
-	}
-	else if(a==3){
-		stack_top();
-	}
-	else if(a==4){
-		b=1;
-		show();
-	}
+	int a, x;
+   cout<<"1) Push in stack";
+   cout<<"2) Pop from stack";
+   cout<<"3) Display stack";
+   cout<<"4) Exit";
+   do {
+      cout<<"Enter choice: ";
+      cin>>a;
+      switch(a) {
+         case 1: {
+            cout<<"Enter value to be pushed:";
+            cin>>x;
+            push(x);
+            break;
+         }
+         case 2: {
+            pop();
+            break;
+         }
+         case 3: {
+            show();
+            break;
+         }
+         case 4: {
+            cout<<"Exit";
+            break;
+         }
+         default: {
+            cout<<"Invalid Choice";
+         }
+      }
+   }while(a!=4);
+   return 0;
 }
 
